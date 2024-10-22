@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <title>O que eu mais gosto de fazer em São Paulo</title>
+    <link rel='stylesheet' href='css/Normalize.css'>
+    <script src='prefixfree.min.js'></script>
+    <style>
+        /* Estilos gerais */
+  
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            min-width: 0; /* Garante que o conteúdo não quebre a linha desnecessariamente */
+        }
+
+        .main-content .texto {
+            margin-bottom: 20px;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove espaço extra abaixo da imagem */
+        }
+
+        #sidenote {
+            flex: 1;
+            min-width: 200px; /* Ajusta conforme necessário */
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='main-content'>
+            <div class='texto'>
+                <h1><a href=''>O que eu mais gosto em São Paulo</a></h1>
+                <h2>Passear na Avenida Paulista!</h2>
+                <img src='logo/Paulista.JPG' alt='O céu da avenida Paulista'> 
+                <p>Um dos principais centros financeiros da cidade, a avenida Paulista também possui diversas opções de entretenimento. Endereço do Museu de Arte de São Paulo, <em>MASP</em>, do Teatro Gazeta e muitos outros, a região é de fácil acesso graças às diversas linhas de ônibus que cruzam a avenida e à linha de metrô que passa por baixo dela.</p>
+                <p>A Avenida Paulista sempre é assunto. O que será que estão falando a respeito no <a href='https://twitter.com/search/Avenida Paulista' target='_blank'>Twitter</a>?</p>
+            </div>
+
+            <div class='texto'>
+                <h2>Bar Vila Madalena</h2>
+                <img src='logo/Madalena.JPG' alt='A varanda do Armazém Piola'>
+                <p>Depois de um dia de trabalho, nada melhor do que um bom chopp, um petisco e uma conversa em uma mesa de bar. Opções de sobra na região das ruas Aspicuelta, Fradique Coutinho e Wisard.</p>
+                <p>Veja quais os melhores bares e restaurantes da região no <a href='http://bit.ly/bares-vila' target='_blank'>Guia da VEJA São Paulo.</a></p>
+            </div>
+
+            <div class='texto'>
+                <h2>O Parque do Ibirapuera</h2>
+                <img src='logo/Parque_Ibirapuera.JPG' alt='O Parque do Ibirapuera, por http://www.flickr.com/photos/soldon/'>
+                <p>Um dos cartões postais da cidade, o parque dispõe de mais de 1,5 km² de área verde, lagos artificiais e pistas de cooper e ciclismo. E se isso não fosse o suficiente, o parque costuma ser palco de diversos eventos culturais ao longo do ano.</p>
+                <p>Veja no <a href='http://goo.gl/maps/HoH8' target='_blank'>mapa</a> como chegar ao parque.</p>
+            </div>
+        </div>
+
+        <div id='sidenote'>
+            <h3>E existem muitos outros lugares interessantes na cidade...</h3>
+            <ol>
+                <li>O Mercado Municipal.</li>
+                <li>A Sala São Paulo.</li>
+                <li>Os estádios dos principais times de futebol da cidade.</li>
+                <li>Diversos museus, como o Memorial da América Latina, Museu da Língua Portuguesa e o Museu do Ipiranga.</li>
+                <li>E mais!</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class='footer'>
+        <p>Parte do livro "HTML5 e CSS3: Domine a web do futuro."</p>
+    </div>
+
+    <script src='jquery.min.js'></script>
+</body>
+</html>
