@@ -1,0 +1,30 @@
+body {
+    color: white;                                     /*colocar a cor branca na fonte*/
+    background-color: black;                          /*coocar fundo de tela preto*/
+    font-family: Arial, Helvetica, sans-serif;          /*Para mudar a fonte*/
+}
+
+ul {
+    display: flex;                          /*para colocar o nome um do lado do outro*/
+    justify-content:space-between;          /*nome localizados na parte supoerior*/
+    list-style-type: none;                  /*para tirar a bolinha da frente do nome*/
+    padding: 16px;                          /*para dixar uma distancia maior de cima e de baixo*/
+    align-items: center;                    /*para diexar o nome superior verticalmente alinha ao centro*/
+}
+
+a {
+    color: white;                        /*colocar cor branca na fonte parte superior*/
+    text-decoration: none;                 /*tirar linha que fica em baixo do nome parte superior*/
+
+}
+
+img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid #5bbe42;
+}
+
+.center {
+    text-align: center;
+}
