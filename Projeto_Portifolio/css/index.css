@@ -18,13 +18,40 @@ a {
 
 }
 
-img {
-    width: 130px;
-    height: 130px;
+header img {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     border: 5px solid #5bbe42;
 }
 
 .center {
     text-align: center;
+}
+
+h1 {
+    color: #5bbe42;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    }
+
+footer a {
+    margin: 20px;
+    text-align: center;
+}
+
+.conteiner {
+    padding: 0px 50px;
+}
+
+nav a:hover {
+    color: #5bbe42;
 }
