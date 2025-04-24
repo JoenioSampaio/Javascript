@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #111; /* Para destacar o cabeçalho (opcional) */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header img {
+    width: 150px; /* Ajuste conforme necessário */
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px; /* Espaço entre os itens do menu */
+    list-style: none;
+}
+
+header nav ul li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+header nav ul li:hover {
+    color: #ff6600; /* Cor ao passar o mouse */
+}
