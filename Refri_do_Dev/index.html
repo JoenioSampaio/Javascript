@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refrigerante do Dev</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="./scripts.js" defer></script>
+  <!-- Declaração do tipo de documento HTML5 -->
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura o viewport para responsividade -->
+  <title>Refrigerante do Dev</title> <!-- Define o título da página -->
+  <link rel="stylesheet" href="./style.css"> <!-- Importa o arquivo de estilos externos -->
 </head>
 <body>
-  <main>
-    <div class="item active" style="--background: #ea3d41;">
-      <div class="center">
-        <img class="refri" src="./img/Morango-refrigerante.png" alt="Refrigerante sabor morango">
-        <div class="title">Morango</div>
+  <main> <!-- Elemento principal do layout -->
+    <!-- Item do carrossel - Morango -->
+    <div class="item active" style="--background: #ea3d41;"> <!-- Primeiro item do carrossel com cor de fundo vermelha -->
+      <div class="center"> <!-- Container central para alinhar o conteúdo -->
+        <img class="refri" src="./img/Morango-refrigerante.png" alt="Refrigerante sabor morango"> <!-- Imagem da lata de refrigerante -->
+        <div class="title">Morango</div> <!-- Título do sabor -->
       </div>
-      <img class="fruit" src="./img/Morango-refrigerante-foregroundBlur.png" alt="Fruta morango em primeiro plano">
+      <img class="fruit" src="./img/Morango-refrigerante-foregroundBlur.png" alt="Fruta morango em primeiro plano"> <!-- Imagem decorativa da fruta -->
     </div>
 
-    <div class="item" style="--background: #2d5643;">
-      <div class="center">
-        <img class="refri" src="./img/Abacate-refrigerante.png" alt="Refrigerante sabor abacate">
-        <div class="title">Abacate</div>
+    <!-- Item do carrossel - Abacate -->
+    <div class="item" style="--background: #2d5643;"> <!-- Segundo item do carrossel com cor de fundo verde -->
+      <div class="center"> <!-- Container central para alinhar o conteúdo -->
+        <img class="refri" src="./img/Abacate-refrigerante.png" alt="Refrigerante sabor abacate"> <!-- Imagem da lata de refrigerante -->
+        <div class="title">Abacate</div> <!-- Título do sabor -->
       </div>
-      <img class="fruit" src="./img/Abacate-refrigerante-foregroundBlur.png" alt="Fruta abacate em primeiro plano">
+      <img class="fruit" src="./img/Abacate-refrigerante-foregroundBlur.png" alt="Fruta abacate em primeiro plano"> <!-- Imagem decorativa da fruta -->
     </div>
 
-    <div class="item" style="--background: #e7a043;">
-      <div class="center">
-        <img class="refri" src="./img/Laranja-refrigerante.png" alt="Refrigerante sabor laranja">
-        <div class="title">Laranja</div>
+    <!-- Item do carrossel - Laranja -->
+    <div class="item" style="--background: #e7a043;"> <!-- Terceiro item do carrossel com cor de fundo laranja -->
+      <div class="center"> <!-- Container central para alinhar o conteúdo -->
+        <img class="refri" src="./img/Laranja-refrigerante.png" alt="Refrigerante sabor laranja"> <!-- Imagem da lata de refrigerante -->
+        <div class="title">Laranja</div> <!-- Título do sabor -->
       </div>
-      <img class="fruit" src="./img/Laranja-refrigerante-foregroundBlur.png" alt="Fruta laranja em primeiro plano">
+      <img class="fruit" src="./img/Laranja-refrigerante-foregroundBlur.png" alt="Fruta laranja em primeiro plano"> <!-- Imagem decorativa da fruta -->
     </div>
 
-    <div class="arrow">
-      <button>&lt;</button>
-      <button>&gt;</button>
+    <!-- Botões de navegação -->
+    <div class="arrow"> <!-- Container para os botões -->
+      <button id="prev">&lt;</button> <!-- Botão de navegação para o item anterior -->
+      <button id="next">&gt;</button> <!-- Botão de navegação para o próximo item -->
     </div>
   </main>
+  <script src="./scripts.js"></script> <!-- Importa o arquivo de script externo -->
 </body>
 </html>

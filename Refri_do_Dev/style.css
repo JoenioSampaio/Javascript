@@ -1,93 +1,120 @@
+/* Reset básico para zerar margens, paddings e configurar box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove paddings padrão */
+  box-sizing: border-box; /* Inclui bordas e paddings no tamanho total */
+}
+
+/* Configurações gerais para o corpo e HTML */
+body, html {
+  height: 100%; /* Define altura total da página */
+  width: 100%; /* Define largura total da página */
+}
+
+main {
+  position: relative; /* Torna o elemento pai para posicionamentos absolutos */
+  width: 100%; /* Largura total */
+  height: 100vh; /* Altura da janela do navegador */
+  overflow: hidden; /* Oculta conteúdo que ultrapassa os limites */
+}
+
+/* Configuração de cada item do carrossel */
+.item {
+  display: none; /* Esconde todos os itens inicialmente */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  position: absolute; /* Posiciona todos os itens no mesmo ponto */
+  top: 0; /* Posiciona no topo */
+  left: 0; /* Posiciona na esquerda */
+  background-color: var(--background); /* Usa a cor dinâmica de fundo */
+}
+
+.item.active {
+  display: block; /* Mostra o item ativo */
+}
+
+/* Estilização da fruta decorativa */
+.fruit {
+  width: 90%; /* Ocupa 90% da largura do container */
+  position: absolute; /* Permite posicionamento dentro do item */
+  top: 0; /* No topo */
+  left: 50%; /* Centralizado horizontalmente */
+  transform: translateX(-50%); /* Ajusta para o centro exato */
+  z-index: 1; /* Define a ordem na pilha de exibição */
+}
+
+/* Configuração do conteúdo central (lata e título) */
+.center {
+  position: absolute; /* Posiciona relativamente ao pai */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+  display: flex; /* Define o layout como flexbox */
+  flex-direction: column; /* Alinha itens na vertical */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  z-index: 2; /* Ordem acima da fruta */
+}
+
+/* Estilização do título */
+.title {
+  font-size: clamp(2rem, 10vw, 12rem); /* Tamanho responsivo */
+  color: #ffffff; /* Cor do texto */
+  font-weight: bold; /* Define o texto como negrito */
+  text-align: center; /* Centraliza o texto */
+  position: absolute; /* Relativo ao pai */
+  z-index: 1; /* Ordem abaixo da lata */
+}
+
+/* Configuração da lata */
+.refri {
+  width: clamp(200px, 60vw, 600px); /* Tamanho dinâmico e responsivo */
+  z-index: 3; /* Ordem acima do título */
+  position: relative; /* Relativo ao pai */
+}
+
+/* Botões de navegação */
+#prev, #next {
+  position: absolute; /* Posiciona em relação ao pai */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajusta para o centro exato */
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  background-color: rgba(238, 233, 233, 0.9); /* Fundo translúcido */
+  border: 1px solid rgba(238, 233, 233, 0.9); /* Borda translúcida */
+  color: #eee; /* Cor do texto */
+  font-size: x-large; /* Texto grande */
+  font-family: monospace; /* Fonte do texto */
+  cursor: pointer; /* Aponta cursor como "mão" */
+  z-index: 4; /* Acima de todos os outros elementos */
+  border-radius: 50%; /* Botões arredondados */
+}
+
+#prev {
+  left: 30px; /* Posicionado à esquerda */
+}
+
+#next {
+  right: 30px; /* Posicionado à direita */
+}
+
+/* Animações */
+@keyframes toActive {
+  from {
+    top: 100%; /* Começa fora da tela */
+    opacity: 0; /* Invisível */
   }
-  
-  body, html {
-    height: 100%;
-    width: 100%;
+  to {
+    top: 0; /* Move para o topo */
+    opacity: 1; /* Visível */
   }
-  
-  main {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .item {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--background);
-  }
-  
-  .item.active {
-    display: block;
-  }
-  
-  .fruit {
-    width: 90%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  
-  .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-  }
-  
-  .title {
-    font-size: clamp(2rem, 10vw, 12rem);
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    z-index: 1; /* Fica atrás da lata */
-    position: absolute;
-  }
-  
-  .refri {
-    width: clamp(200px, 60vw, 600px);
-    z-index: 3; /* Fica em cima do título */
-    position: relative;
-  }
-  
-  /* Botões de navegação */
-  .arrow {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1.5rem;
-    z-index: 10;
-  }
-  
-  .arrow button {
-    font-size: 2rem;
-    padding: 1rem;
-    background-color: white;
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .arrow button:hover {
-    background-color: #ddd;
-  }
-  
+}
+
+/* Aplica a animação ao item ativo */
+.item.active img.fruit {
+  animation: toActive 1s ease-in 1; /* Configura o efeito de entrada */
+}
+
+.item.active .title {
+  animation: toActive 1s ease-in 1; /* Configura o efeito de entrada */
+}
